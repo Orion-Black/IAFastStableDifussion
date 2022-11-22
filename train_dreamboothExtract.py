@@ -394,7 +394,6 @@ def get_full_repo_name(model_id: str, organization: Optional[str] = None, token:
 
 
 def main():
-    
     args = parse_args()
     logging_dir = Path(args.output_dir, args.logging_dir)
     i=args.save_starting_step
@@ -765,7 +764,7 @@ def main():
     #Aqui hay que exportar los datos generados por la perdida
     print("Guardando datos de entrenamiento en dataLoss.csv")
     df = pd.DataFrame(perdidas)
-    df.to_csv('/content/gdrive/MyDrive/dataLoss.csv')
+    df.to_csv('/content/EntrenamientoResultSet/dataLoss.csv')
     # Create the pipeline using using the trained modules and save it.
     if accelerator.is_main_process:
       if args.dump_only_text_encoder:
